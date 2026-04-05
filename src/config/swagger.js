@@ -9,8 +9,14 @@ const options = {
       description: "Role-based Finance Dashboard Backend — Node.js + Express + MongoDB",
     },
     servers: [
-      { url: "https://finance-dashboard-system-backend-6qh0.onrender.com/api-docs", description: "Production" },
-      { url: "http://localhost:5000/api", description: "Local Dev" },
+      { 
+        url: "https://finance-dashboard-system-backend-6qh0.onrender.com/api", 
+        description: "Production" 
+      },
+      { 
+        url: "http://localhost:5000/api", 
+        description: "Local" 
+      },
     ],
     components: {
       securitySchemes: {
@@ -18,7 +24,6 @@ const options = {
           type: "http",
           scheme: "bearer",
           bearerFormat: "JWT",
-          description: "Login karo → token copy karo → 'Authorize' button mein paste karo"
         },
       },
     },
