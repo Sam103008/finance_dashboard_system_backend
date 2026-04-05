@@ -1,3 +1,5 @@
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpec = require("./config/swagger");
 const express = require("express");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
@@ -41,6 +43,10 @@ app.get("/health", (req, res) => {
     environment: process.env.NODE_ENV,
   });
 });
+
+// ─── Swagger UI ───────────────────────────────────────────────────────────────
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 
 // ─── API Routes ───────────────────────────────────────────────────────────────
 app.use("/api/auth", authRoutes);
