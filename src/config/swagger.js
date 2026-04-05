@@ -9,7 +9,7 @@ const options = {
       description: "Role-based Finance Dashboard Backend — Node.js + Express + MongoDB",
     },
     servers: [
-      { url: "https://finance-dashboard-system-backend-6qh0.onrender.com/api", description: "Production" },
+      { url: "https://finance-dashboard-system-backend-6qh0.onrender.com/api-docs", description: "Production" },
       { url: "http://localhost:5000/api", description: "Local Dev" },
     ],
     components: {
